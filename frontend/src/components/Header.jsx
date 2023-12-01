@@ -30,7 +30,7 @@ const Header = () => {
             <Navbar bg="dark" variant="dark" expand="lg" callapseOnSelect>
                 <Container>
                     <LinkContainer to="/">
-                        <Navbar.Brand>MERN Auth</Navbar.Brand>
+                        <Navbar.Brand>My WebApp</Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
