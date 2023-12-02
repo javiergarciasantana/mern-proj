@@ -23,7 +23,7 @@ const RegisterScreen = () => {
 
     useEffect(() => {
         if (userInfo) {
-            navigate('/');
+            navigate('/users');
         }
     }, [navigate, userInfo]);
 
@@ -36,7 +36,7 @@ const RegisterScreen = () => {
                 const res = await register({ name, email, password }).unwrap();
                 console.log(res);
                 dispatch(setCredentials({ ...res }));
-                navigate('/');
+                navigate('/users');
             } catch (err) {
                 toast.error(err?.data.message || err.error);
             }
