@@ -21,7 +21,7 @@ const LoginScreen = () => {
 
     useEffect(() => {
         if (userInfo) {
-            navigate("/");
+            navigate("/users");
         }
     }, [navigate, userInfo]);
 

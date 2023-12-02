@@ -6,9 +6,11 @@ import LoginScreen from './screens/LoginScreen.jsx'
 import RegisterScreen from './screens/RegisterScreen.jsx';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import PrivateRoute from "./components/PrivateRoute.jsx";
+import Users from "./screens/Users.jsx";
+import CreateUser from "./screens/CreateUser.jsx";
+import UpdateUser from "./screens/UpdateUser.jsx";
 import store from "./store.js";
 import { Provider } from "react-redux";
-import './index.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 
@@ -21,6 +23,9 @@ const router = createBrowserRouter(
       <Route path="" element={ <PrivateRoute /> }>
         <Route path="/profile" element={ <ProfileScreen /> } />
       </Route>
+      <Route path='/users' element={<Users />}></Route>
+      <Route path='/create' element={<CreateUser />}></Route>
+      <Route path='/update/:id' element={<UpdateUser />}></Route>
     </Route>
   )
 );
